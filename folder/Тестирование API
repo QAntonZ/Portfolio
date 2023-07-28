@@ -1,0 +1,1538 @@
+{
+	"info": {
+		"_postman_id": "be7f1a85-db01-462a-a9af-4c11daf5c9da",
+		"name": "Skyeng",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23879452",
+		"_collection_link": "https://www.postman.com/martian-robot-400250/workspace/2-5-tony-skyeng/collection/23879452-be7f1a85-db01-462a-a9af-4c11daf5c9da?action=share&creator=23879452&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Просмотр списка событий",
+			"item": [
+				{
+					"name": "Просмотр списка личных событий",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686664124.0.0.0; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2NDEyNDQyMCwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\": \"2023-06-12T00:00:00+03:00\",\r\n    \"till\": \"2023-06-19T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/events",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"events"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Просмотр списка событий за несуществующий период",
+			"item": [
+				{
+					"name": "Просмотр списка личных событий за несуществующий период",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686664124.0.0.0; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2NDEyNDQyMCwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"from\": \"2023-00-12T00:00:00+03:00\",\r\n    \"till\": \"2022-15-19T00:00:00+03:00\",\r\n    \"onlyTypes\": []\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/events",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"events"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Создание личного события в настоящем",
+			"item": [
+				{
+					"name": "Добавление события в настоящем времени",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"IdPresent\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);\r",
+									"\r",
+									"var key = \"startPresent\"\r",
+									"var value = pm.response.json().data.startAt\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2MTk5MjQ4MCwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686662337.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#EBFDF2\",\r\n    \"color\": \"#8B0000\",\r\n    \"description\": \"\",\r\n    \"title\": \"Вот так уот\",\r\n    \"startAt\": \"2023-06-13T12:00:00+03:00\",\r\n    \"endAt\": \"2023-06-13T13:00:00+03:00\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/createPersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление персонального события",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2NDc2MDQ1NywiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686664791.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{IdPresent}},\r\n    \"startAt\": \"{{startPresent}}\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/removePersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"removePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Создание личного события в прошлом",
+			"item": [
+				{
+					"name": "Добавление события в прошедшем времени",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"idPast\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);\r",
+									"\r",
+									"var key = \"startPast\"\r",
+									"var value = pm.response.json().data.startAt\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2MTk5MjQ4MCwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686662337.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#EBFDF2\",\r\n    \"color\": \"#8B0000\",\r\n    \"description\": \"\",\r\n    \"title\": \"Вот так уот\",\r\n    \"startAt\": \"2023-06-12T12:00:00+03:00\",\r\n    \"endAt\": \"2023-06-12T13:05:00+03:00\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/createPersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление персонального события",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2NDc2MDQ1NywiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686664791.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{idPast}},\r\n    \"startAt\": \"{{startPast}}\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/removePersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"removePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Создание личного события в будущем",
+			"item": [
+				{
+					"name": "Добавление события в будущем времени",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"IdFuture\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);\r",
+									"\r",
+									"var key = \"startFuture\"\r",
+									"var value = pm.response.json().data.startAt\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2MTk5MjQ4MCwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686662337.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#EBFDF2\",\r\n    \"color\": \"#8B0000\",\r\n    \"description\": \"\",\r\n    \"title\": \"Вот так уот\",\r\n    \"startAt\": \"2023-06-14T12:00:00+03:00\",\r\n    \"endAt\": \"2023-06-14T13:00:00+03:00\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/createPersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление персонального события",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2NDc2MDQ1NywiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686664791.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{IdFuture}},\r\n    \"startAt\": \"{{startFuture}}\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/removePersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"removePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Создание личного события в не существующем времени",
+			"item": [
+				{
+					"name": "Создание личного события в не существующем времени",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2OTAwNDIxMSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686670413.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"backgroundColor\":\"#EBFDF2\",\"color\":\"#43B658\",\"description\":\"\",\"title\":\"Поесть\",\"startAt\":\"2023-06-14T11:30:00+03:00\",\"endAt\":\"2023-06-14T12:00:00+03:00\"}"
+						},
+						"url": {
+							"raw": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+							"protocol": "https",
+							"host": [
+								"api-teachers",
+								"skyeng",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Удаление личного события",
+			"item": [
+				{
+					"name": "Добавление события",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"IdPresent\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);\r",
+									"\r",
+									"var key = \"startPresent\"\r",
+									"var value = pm.response.json().data.startAt\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2MTk5MjQ4MCwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686662337.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#EBFDF2\",\r\n    \"color\": \"#8B0000\",\r\n    \"description\": \"\",\r\n    \"title\": \"Вот так уот\",\r\n    \"startAt\": \"2023-06-13T12:00:00+03:00\",\r\n    \"endAt\": \"2023-06-13T13:00:00+03:00\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/createPersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление персонального события",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2NDc2MDQ1NywiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686664791.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{IdPresent}},\r\n    \"startAt\": \"{{startPresent}}\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/removePersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"removePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Удаление не существующего события",
+			"item": [
+				{
+					"name": "Удаление не существующего события",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2NDc2MDQ1NywiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686664791.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 82484369,\r\n    \"startAt\": \"2019-06-12T09:00:00+00:00\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/removePersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"removePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Редактирование события",
+			"item": [
+				{
+					"name": "Добавление события",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"IdPresent\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);\r",
+									"\r",
+									"var key = \"startPresent\"\r",
+									"var value = pm.response.json().data.startAt\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2MTk5MjQ4MCwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686662337.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#EBFDF2\",\r\n    \"color\": \"#8B0000\",\r\n    \"description\": \"\",\r\n    \"title\": \"Вот так уот\",\r\n    \"startAt\": \"2023-06-13T12:00:00+03:00\",\r\n    \"endAt\": \"2023-06-13T13:00:00+03:00\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/createPersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Редактирование персонального события",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"idNew\"\r",
+									"var value = pm.response.json().data.payload.id\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);\r",
+									"\r",
+									"var key = \"startNew\"\r",
+									"var value = pm.response.json().data.startAt\r",
+									"\r",
+									"pm.collectionVariables.set(key, value);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2ODQ4MDcyMiwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686668537.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#F9EBFF\",\r\n    \"color\": \"#D478F1\",\r\n    \"description\": \"Меня редактировали!\",\r\n    \"title\": \"Вот так уота\",\r\n    \"startAt\": \"2023-06-13T04:30:00+03:00\",\r\n    \"endAt\": \"2023-06-13T17:40:00+03:00\",\r\n    \"id\": {{IdPresent}},\r\n    \"oldStartAt\": \"{{startPresent}}\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/updatePersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"updatePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление персонального события",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; __exponea_time2__=-0.0798349380493164; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2NDc2MDQ1NywiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686664791.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": {{idNew}},\r\n    \"startAt\": \"{{startNew}}\"\r\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/v2/schedule/removePersonal",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"removePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Редактирование не существующего события",
+			"item": [
+				{
+					"name": "Редактирование не существующего события",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authority",
+								"value": "api-teachers.skyeng.ru"
+							},
+							{
+								"key": "accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "accept-language",
+								"value": "ru"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							},
+							{
+								"key": "cookie",
+								"value": "_ym_uid=1679489849208107051; _ym_d=1679831565; _gcl_au=1.1.268020467.1679831565; _setz=Europe/Moscow; skyeng_mData=rm8do5x3vqpqmlt455nhFnmDFWYlCRUA; _seid=01cd1aa66a584a858e8996843f4d4c26; es_id=2971370; studcab_current_product={%22type%22:%22concrete%22%2C%22identifier%22:%22english-adult-not-native-speaker%22}; _gid=GA1.2.512524563.1686661312; _ym_isad=2; _ym_visorc=w; tmr_lvid=69de8509a2416f425e2268028bc258e8; tmr_lvidTS=1679489927051; advcake_session_id=8a161151-fe21-2773-40d3-b81d0f96096e; _fbp=fb.1.1686661321523.1815351863; __exponea_etc__=a3364ec6-2aa9-4183-b540-3b1572ae5993; _tt_enable_cookie=1; _ttp=vqA2aA1Em73XrZeHNHF8o9LL4xq; _ga_03EGKN82H3=GS1.1.1686661319.2.0.1686661325.54.0.0; _ga_5DWC4JK87M=GS1.1.1686661319.2.0.1686661325.54.0.0; global_id=YWVzLTEyOC1jYmM%3D.35jhesHfqUkjLMoZlrKlog%3D%3D.XZy0%2BGh95g1HkVtGr4qLxa36LXMkCRf%2BjL5vSEYWgWM%3D; session_global=ro9cnb9n588cenmdeboji65ial; token_global=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA; _ga=GA1.1.1777882532.1679831566; session_teachers_cabinet=1nbaj4l6fv4puc61l6mu12vpc4; amplitude_id_ef9dd375ed875487462b31c2bbac3d1fskyeng.ru=eyJkZXZpY2VJZCI6IjYxNTRkNDc1LTkxZTMtNDQ4ZC05NDkwLWI4MjI4NmFhOTk0M1IiLCJ1c2VySWQiOiIxNDU5NjkzMyIsIm9wdE91dCI6ZmFsc2UsInNlc3Npb25JZCI6MTY4NjY2MTM3MDM3NiwibGFzdEV2ZW50VGltZSI6MTY4NjY2OTAwNDIxMSwiZXZlbnRJZCI6MCwiaWRlbnRpZnlJZCI6MCwic2VxdWVuY2VOdW1iZXIiOjB9; _ga_SR964WVJCV=GS1.1.1686661358.1.1.1686670123.0.0.0"
+							},
+							{
+								"key": "origin",
+								"value": "https://teachers.skyeng.ru"
+							},
+							{
+								"key": "referer",
+								"value": "https://teachers.skyeng.ru/"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Chromium\";v=\"106\", \"Google Chrome\";v=\"106\", \"Not;A=Brand\";v=\"99\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Windows\""
+							},
+							{
+								"key": "sec-fetch-dest",
+								"value": "empty"
+							},
+							{
+								"key": "sec-fetch-mode",
+								"value": "cors"
+							},
+							{
+								"key": "sec-fetch-site",
+								"value": "same-site"
+							},
+							{
+								"key": "user-agent",
+								"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"backgroundColor\": \"#FFF7C7\",\r\n    \"color\": \"#FAC641\",\r\n    \"description\": \"\",\r\n    \"title\": \"Поесть супа\",\r\n    \"startAt\": \"2023-06-14T12:00:00+03:00\",\r\n    \"endAt\": \"2023-06-14T12:30:00+03:00\",\r\n    \"id\": 82486618,\r\n    \"oldStartAt\": \"2023-06-14T12:00:00+03:00\"\r\n}"
+						},
+						"url": {
+							"raw": "https://api-teachers.skyeng.ru/v2/schedule/updatePersonal",
+							"protocol": "https",
+							"host": [
+								"api-teachers",
+								"skyeng",
+								"ru"
+							],
+							"path": [
+								"v2",
+								"schedule",
+								"updatePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "token_global",
+			"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJ1c2VySWQiOjE0NTk2OTMzLCJpZGVudGl0eSI6InRlc3QudHN0MzE3QHNreWVuZy5ydSIsImlkZW50aXR5TG9naW4iOm51bGwsImlkZW50aXR5RW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJpZGVudGl0eVBob25lIjpudWxsLCJuYW1lIjoidGVzdCIsInN1cm5hbWUiOiJ0ZXN0IiwiZW1haWwiOiJ0ZXN0LnRzdDMxN0Bza3llbmcucnUiLCJ1aUxhbmd1YWdlIjoicnUiLCJsb2NhbGUiOiJydSIsInNlcnZpY2VMb2NhbGUiOm51bGwsInVhcyI6MzAsImp3dFR5cGUiOjEsImp0aSI6Ik13Wkl6N21JSHdTZGlIWGprSzVhVG12dTNxaFYySHY2IiwiYnJhbmQiOm51bGwsImV4cCI6MTY4Njc0Nzc1NywiYXZhdGFyVXJsIjoiaHR0cHM6XC9cL2F1dGgtYXZhdGFycy1za3llbmcuaW1naXgubmV0XC8xNDU5NjkzM1wvOThmNmJlYjUtZjA3Yi00MWViLThiYzItNDU3MTQwYTc0ODgzP2F1dG89Zm9ybWF0JTJDZW5oYW5jZSZmaXQ9Y3JvcCZoPTIwMCZpeGxpYj1waHAtMi4xLjEmcT03NSZzYXQ9OCZzaGFycD0xMCZ2aWI9OCZ3PTIwMCIsImFJc1N0cm9uZyI6dHJ1ZSwiYVR5cGUiOiJVU0VSTkFNRV9QQVNTV09SRCIsImFUaW1lIjoxNjg2NjYxMzU2LCJyb2xlcyI6WyJST0xFX1RFQUNIRVJfQ0FORElEQVRFIiwiUk9MRV9URUFDSEVSX0NBTkRJREFURV9CQVNFX0FDQ0VTUyIsIlJPTEVfVFRDX1VTQUdFIiwiUk9MRV9WSU1CT1hfVEVBQ0hFUl9VU0FHRSIsIlJPTEVfVEVBQ0hFUiIsIlJPTEVfQ1JNMl9URUFDSEVSX0FDQ0VTUyIsIlJPTEVfTUFUSF9URUFDSEVSIiwiUk9MRV9NQVRIX0NPTlRFTlRfVEhFTUVfVklFVyJdfQ.ehsJFDRHkUC2D-IN22FEAhcqZbExQwU7BsYDL5C4VwTXfrkVYctg5-A89LEzkM9PBIL8BTbMPEHAKIbdfviJbxhbKBPAScYBXX9KjZmqOBE0pf1-OZBKJVpbZg82yunv_b7G_YebuurVRrBzf1ABdAXjNBHkV0aHf8iGTL7S2qQLhcb478kTXyqsBudiq8UPGEUbL1PZc6Z0SX4PAxloEsLdG5ug32obQLaS2-RFU3bZVHpe0T3t8H9CGwtqMCCH9QoJXpLTcUzWwMhVFvzZ74SIxwm3jQuA48e6RSCEVckLWZ8-iIUgVTgZgAePduPVvl8ZDPWOSMD421iCfWOog_7WNEw8gdnR2qlODOQggV0opecw-juwtw2HEYhVB0-jQ3F_fwNjNgUkExtz_TqnQOX_yaCW22C4ymIeoCjCZip-YVOkYzek_fjBet_Yzm4MWRK9EslNs9eBDsG6YSljR56q-sDYiGp864gH0Z2V0AZjrhmo3tyz9fI9liIrrjdCXOD3VQrg7L_i29goCTgchhe7QSeYnF-7fbRORYwQSm4S0TM0jO7KKc7KG4x3C9COEuPkLgOeYBoUqsOwSp4M6_bCNmQDAREFM-moyzc-MfEar-c9HKX9g4sMpzhXGU0oeYqj4c9zbFwR6GoqaJvvE7lraYNtt6544UIhj-QqFpA",
+			"type": "string"
+		},
+		{
+			"key": "baseUrl",
+			"value": "https://api-teachers.skyeng.ru",
+			"type": "string"
+		},
+		{
+			"key": "IdPresent",
+			"value": ""
+		},
+		{
+			"key": "IdFuture",
+			"value": ""
+		},
+		{
+			"key": "startPast",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "startPresent",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "startFuture",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "IdPast",
+			"value": ""
+		},
+		{
+			"key": "IdNew",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "startNew",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "idNew",
+			"value": ""
+		},
+		{
+			"key": "idPast",
+			"value": ""
+		}
+	]
+}
