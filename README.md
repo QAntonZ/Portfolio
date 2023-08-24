@@ -62,4 +62,4 @@
 
 
 ## Контактная информация
-- Email: aтtonzhemaev1995@gmail.com
+- Email: antonzhemaev1995@gmail.com
