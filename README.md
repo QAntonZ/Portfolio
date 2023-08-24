@@ -38,8 +38,6 @@
 - Составление отчета о тестировании<p>
 
 > <a href="https://zhemaev-bug-report.atlassian.net/l/cp/3k3Lg0re">Ссылка на проект</a>
-> <p> логин: antonzhemaev1995@gmail.com </p>
-> <p> пароль: Mcm8170t </p>
 
 <p>Вывод (итог):<p>
 <ol>
